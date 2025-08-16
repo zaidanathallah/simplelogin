@@ -1,0 +1,15 @@
+{
+  "builds": [
+    {
+      "src": "lib/main.dart",
+      "use": "@vercel/node",
+      "config": { "includeFiles": ["**/*.dart"] }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/lib/main.dart"
+    }
+  ]
+}
